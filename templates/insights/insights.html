@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/." class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'work_page' %}">Work</a></li>
+                        <li><a href="{% url 'service_page' %}">Services</a></li>
+                        <li class="active"><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="section-wrapper default bg-blue-dark section-sub-hero">
+        <div class="container-wide">
+
+            <h1 class="title-heading white">Insights</h1>
+            <p>Here are some insights on the streaming industry, whats going on here behind the scenes, and tips that can be useful to your stream and brand!
+            </p>
+
+        </div>
+    </div>
+    <div class="section-wrapper default section-insights mobile">
+        <div class="container-wide">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <a href="{% url 'gfx_story_page' %}">
+                        <div class="insight-card">
+                            <div class="img-wrapper">
+                                <img src="/media/insights/hivebranding-to-gamefacex.png">
+                            </div>
+                            <div class="details">
+                                <h5>GamefaceX - a new beginning</h5>
+                                <div class="time-posted">April 21, 2021</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <a href="{% url 'partner_page' %}">
+                        <div class="insight-card">
+                            <div class="img-wrapper">
+                                <img src="/media/insights/partner.png">
+                            </div>
+                            <div class="details">
+                                <h5>Become a partner - FREE graphics</h5>
+                                <div class="time-posted">April 21, 2021</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {%endblock%}

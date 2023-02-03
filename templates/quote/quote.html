@@ -1,0 +1,93 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/." class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'work_page' %}">Work</a></li>
+                        <li><a href="{% url 'service_page' %}">Services</a></li>
+                        <li><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li class="active"><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="section-wrapper default bg-blue-dark section-sub-hero">
+        <div class="container">
+
+            <h1 class="title-heading white">Get a quote today</h1>
+            <p>Like what you see and ready to work on your brand? Start by placing and order with us and you will be emailed shortly after to discuss the vision of your channel.
+            </p>
+
+        </div>
+    </div>
+    
+    <div class="section-wrapper default" id="order-form">
+        <div class="container">
+            <div class="order-form">
+                <div id="errors" style="color: red; margin-bottom:20px;"></div>
+                <form id="order-form" method="POST">
+                    {% csrf_token %}
+                    <input name="name" type="text" class="form-control" placeholder="Your Name" required maxlength=64>
+                    <br>
+                    <input name="email" type="email" class="form-control" placeholder="Your Email" required maxlength=255>
+                    <br>
+                    <input name="socials" type="text" class="form-control" placeholder="Social media account(s)" required maxlength=64>
+                    <br>
+                    <input name="services" type="text" class="form-control" placeholder="What service(s) are you looking for?" required maxlength=1000>
+                    <br>
+                    <input name="budget" type="text" class="form-control" placeholder="What is your budget?" required maxlength=16>
+                    <br>
+                    <textarea name="details" class="form-control" placeholder="Any extra details for us?" row="4" required maxlength=255></textarea>
+                    <br>
+                    <input name="traffic" type="text" class="form-control" placeholder="Where did you hear about us?" required maxlength=255>
+                    <br>
+                    <input type="submit" class="default-btn" value="Sumbit">
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(
+            $('form#order-form').on('submit', function(e){
+                e.preventDefault()
+
+                let csrfmiddlewaretoken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+                let name = $('[name="name"]').val();
+                let email = $('[name="email"]').val();
+                let socials = $('[name="socials"]').val();
+                let services = $('[name="services"]').val();
+                let budget = $('[name="budget"]').val();
+                let details = $('[name="details"]').val();
+                let traffic = $('[name="traffic"]').val();
+                $.post("{% url 'sent-quote' %}",{
+                    csrfmiddlewaretoken: csrfmiddlewaretoken,
+                    name: name,
+                    email: email,
+                    socials: socials,
+                    services: services,
+                    budget: budget,
+                    details: details,
+                    traffic: traffic
+                }).done(function(html){
+                    $('div#order-form').html(html);
+                }).fail(function(resp){
+                    $('div#errors').html(resp.responseJSON.msg);
+                })
+            })
+        )
+    </script>
+
+{%endblock%}

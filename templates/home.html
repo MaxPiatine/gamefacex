@@ -1,0 +1,259 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- HEADER -->
+
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/" class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'work_page' %}">Work</a></li>
+                        <li><a href="{% url 'service_page' %}">Services</a></li>
+                        <li><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- DESKTOP HERO -->
+    <div class="section-wrapper hero index">
+        <video class="video-overlay" autoplay muted loop playsinline id="myVideo">
+                <source src="/media/videos/herovid.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>GAMEFACE <span>ON</span></h1>
+                    <h5>Leading stream graphics agency for the gaming world.</h5>
+                    <div class="hero-actions-wrapper">
+                        <a href="{% url 'work_page' %}" class="default-btn">View work</a>
+                        <a href="{% url 'quote' %}" class="default-btn outline">Order now</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-wrapper">
+        <div class="container-wide">
+            <div class="carousel-wrapper">
+                <div id="#myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-item active" data-interval="5000">
+                        <div class="case-study-preview">
+                            <img src="/media/case-studies/kingland/preview.jpg" class="d-block w-100 h-100">
+                            <div class="case-study-preview-inner">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm-12">
+                                        <h4>Featured Work<span class="mobile-name">Kingland</span></h4>
+                                        <h1 class="text-white">Kingland</h1>
+                                        <div class="case-desc">
+                                            <h5>Ya boy, Kingland, is upcoming streamer with a king’s golden energy. It was only right for his brand to reflect that. </h5>
+                                        </div>
+                                        <div class="case-study-preview-action">
+                                            <a href="{% url 'kingland' %}" class="default-btn pc">View Work <span class="btn-icon"><i
+                                                        class="far fa-arrow-right"></i></span></a>
+                                            <a href="{% url 'kingland' %}" class="default-btn mobile"><span class="btn-icon"><i
+                                                            class="far fa-arrow-right"></i></span></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <div class="case-study-preview">
+                            <img src="/media/case-studies/mudbuddy/preview.jpg" class="d-block w-100 h-100">
+                            <div class="case-study-preview-inner">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm-12">
+                                        <h4>Featured Work<span class="mobile-name">Mudbuddy</span></h4>
+                                        <h1 class="text-white">Mudbuddy</h1>
+                                        <div class="case-desc">
+                                            <h5>Duck hunter during the day, twitch streamers during the night. A wild package for a wild content creator. </h5>
+                                        </div>
+                                        <div class="case-study-preview-action">
+                                            <a href="{% url 'mudbuddy' %}" class="default-btn pc">View Work <span class="btn-icon"><i
+                                                        class="far fa-arrow-right"></i></span></a>
+                                            <a href="{% url 'mudbuddy' %}" class="default-btn mobile"><span class="btn-icon"><i
+                                                            class="far fa-arrow-right"></i></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <div class="case-study-preview">
+                            <img src="/media/case-studies/folkhen/preview.jpg" class="d-block w-100 h-100">
+                            <div class="case-study-preview-inner">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm-12">
+                                        <h4>Featured Work<span class="mobile-name">Folkhen</span></h4>
+                                        <h1 class="text-white">Folkhen</h1>
+                                        <div class="case-desc">
+                                            <h5>Strong community leader: Folkhen, and a brand to represent his leadership.</h5>
+                                        </div>
+                                        <div class="case-study-preview-action">
+                                            <a href="{% url 'folkhen' %}" class="default-btn pc">View Work <span class="btn-icon"><i
+                                                        class="far fa-arrow-right"></i></span></a>
+                                            <a href="{% url 'folkhen' %}" class="default-btn mobile"><span class="btn-icon"><i
+                                                            class="far fa-arrow-right"></i></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <div class="case-study-preview">
+                            <img src="/media/case-studies/kingboozer/preview.jpg" class="d-block w-100 h-100">
+                            <div class="case-study-preview-inner">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm-12">
+                                        <h4>Featured Work<span class="mobile-name">King boozer</span></h4>
+                                        <h1 class="text-white">King boozer</h1>
+                                        <div class="case-desc">
+                                            <h5>The drunken’ king! A package that reflects his energy and personality. </h5>
+                                        </div>
+                                        <div class="case-study-preview-action">
+                                            <a href="{% url 'kingboozer' %}" class="default-btn pc">View Work <span class="btn-icon"><i
+                                                        class="far fa-arrow-right"></i></span></a>
+                                            <a href="{% url 'kingboozer' %}" class="default-btn mobile"><span class="btn-icon"><i
+                                                            class="far fa-arrow-right"></i></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <div class="case-study-preview">
+                            <img src="/media/case-studies/alfy/preview.png" class="d-block w-100 h-100">
+                            <div class="case-study-preview-inner">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm-12">
+                                        <h4>Featured Work<span class="mobile-name">Alfy</span></h4>
+                                        <h1 class="text-white">Alfy</h1>
+                                        <div class="case-desc">
+                                            <h5>Call of Duty Warzone’s next up! </h5>
+                                        </div>
+                                        <div class="case-study-preview-action">
+                                            <a href="{% url 'alfy' %}" class="default-btn pc">View Work <span class="btn-icon"><i
+                                                        class="far fa-arrow-right"></i></span></a>
+                                            <a href="{% url 'alfy' %}" class="default-btn mobile"><span class="btn-icon"><i
+                                                            class="far fa-arrow-right"></i></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- services section -->
+    <div class="section-wrapper default section-services-index">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="layouts-images text-right">
+                        <img class="img-fluid" src="/media/logo/gfx.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="layouts-section-text">
+                        <div class="heading-text">
+                            <h2>Quality graphics. Quality service.</h2>
+                        </div>
+                        <p>Here at GamefaceX, we pride ourselves on delivering the best quality of work and customer service, custom to the needs of each individual gamer. Our services cover everything you will need to set your stream apart from the rest!
+                        </p>
+                        <ul class="check-list">
+                            <li class="list-item"><i class="fas fa-check-circle"></i> Logo Design</li>
+                            <li class="list-item"><i class="fas fa-check-circle"></i> Stream Graphics</li>
+                            <li class="list-item"><i class="fas fa-check-circle"></i> Social media</li>
+                            <li class="list-item"><i class="fas fa-check-circle"></i> Emotes</li>
+                            <li class="list-item"><i class="fas fa-check-circle"></i> Animation/Motion design</li>
+                            <li class="list-item"><i class="fas fa-check-circle"></i> and more!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tbd section -->
+    <div class="section-wrapper default bg-blue-light section-insights index">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-wrapper text-center">
+                        <h2>Featured Insights</h2>
+                        <p>Here are some insights on the streaming industry, behind the scenes, and tips that can be useful to your stream and brand! </p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <a href="{% url 'gfx_story_page' %}">
+                        <div class="insight-card">
+                            <div class="img-wrapper">
+                                <img src="/media/insights/hivebranding-to-gamefacex.png">
+                            </div>
+                            <div class="details">
+                                <h5>GamefaceX - a new beginning</h5>
+                                <div class="time-posted">April 21, 2021</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="{% url 'partner_page' %}">
+                        <div class="insight-card">
+                            <div class="img-wrapper">
+                                <img src="/media/insights/partner.png">
+                            </div>
+                            <div class="details">
+                                <h5>Become a partner - FREE graphics</h5>
+                                <div class="time-posted">June 17, 2021</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-wrapper default bg-blue-dark section-cta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="cta-content text-center">
+                        <h2>Ready to get started?</h2>
+                        <div class="cta-btn_wrapper text-center">
+                            <a class="default-btn" href="{% url 'quote' %}">Get in touch
+                                <span class="btn-icon">
+                                    <i class="far fa-arrow-right"></i>
+                                </span>
+                            </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

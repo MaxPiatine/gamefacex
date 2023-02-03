@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H1HJYK6YBD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H1HJYK6YBD');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>GamefaceX</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-title" content="GamefaceX">
+
+    <link rel="icon" href="/media/logo/avi-standard.jpg">
+    <link rel="apple-touch-icon" href="/media/logo/avi-standard.jpg">
+    <link rel="apple-touch-icon" sizes="152x152" href="/media/logo/avi-standard.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/logo/avi-standard.jpg">
+    <link rel="apple-touch-icon" sizes="167x167" href="/media/logo/avi-standard.jpg">
+
+
+
+
+    {% load static %}
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/vendor/vendor.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/plugins/plugins.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+</head>
+
+<body>
+    
+
+{% block content %}
+{% endblock %}
+
+
+    <!-- FOOTER-->
+    <div class="footer-area-wrapper bg-blue-darker">
+        <div class="footer-area">
+            <div class="container-wide">
+                <div class="row footer-widget-wrapper text-center">
+                    <div class="col-lg-12 footer-widget">
+                        <div class="footer-widget_logo">
+                            <a href="/.">
+                                <img src="/media/logo/Type+Logo--Bg-Dark.png" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 footer-widget_icons text-center">
+                        <a href="twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="youtube.com/"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-area">
+            <div class="container-wide">
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <span class="copyright-text">&copy; 2020 GamefaceX. All
+                                Rights
+                                Reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'js/main.js' %} "></script>
+
+
+</body>
+
+
+
+</html>

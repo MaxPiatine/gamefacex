@@ -1,0 +1,186 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/." class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'work_page' %}">Work</a></li>
+                        <li class="active"><a href="{% url 'service_page' %}">Services</a></li>
+                        <li><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-wrapper default section-services bg-blue-dark section-sub-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="title-heading white">What we can do for you</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="service-card_wrapper">
+                        <div class="service-image">
+                            <img src="/media/other/service-logo.png">
+                        </div>
+                        <hr>
+                        <div class="details">
+                            <h2>Logo Design</h2>
+                            <p>The logo is the face of the brand, and if you want your brand to be taken seriously, it is important that you invest in a sustainable logo.</p>
+                            <p>All of our logos are custom to the needs and vision of our client. You can provide us a sketch what you have in mind and our artist will turn your idea into a professional piece that you can be confident representing your brand
+                                with.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="service-card_wrapper">
+                        <div class="service-image">
+                            <img src="/media/other/service-stream.png">
+                        </div>
+                        <hr>
+                        <div class="details">
+                            <h2>Stream Graphics</h2>
+                            <p>We create stream graphics that are engaging and captivate the eyes of your audience. However, our style of stream graphics does not distract your viewers from the content of the stream – rather, it serves as a complement.</p>
+                            <p>Today, animated stream graphics are becoming more and more popular – and we have the resources to meet the demands.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="service-card_wrapper">
+                        <div class="service-image">
+                            <img src="/media/other/service-emotes.png">
+                        </div>
+                        <hr>
+                        <div class="details">
+                            <h2>Emotes and badges</h2>
+                            <p>Emotes and badges are a great to show your viewers that you care and want them to continue engaging with one another – and have fun while doing it.</p>
+                            <p>Our emotes are priced fairly and done with the upmost quality. You can purchase them individually, or you can buy in bulk for a discounted price. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="service-card_wrapper">
+                        <div class="service-image">
+                            <img src="/media/other/service-motion.png">
+                        </div>
+                        <hr>
+                        <div class="details">
+                            <h2>Motion</h2>
+                            <p>Why be simple and static when your graphics can be animated. From YouTube intro, to stream alerts, and all of the above; our designers are able to animate any of your graphics. This is a great way to separate yourself from
+                                the crowd and standoff. </p>
+                            <h3 class="primary-blue">And more!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-wrapper default section-process">
+        <div class="container">
+            <h2>Our process</h2>
+            <p class="text-grey">Our process is tailored to the needs and experience of our clients. With hundreds of projects in our history, we understand what is needed to deliver optimal customer service experience.</p>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="process-card_wrapper text-center">
+                        <div class="icon_wrapper">
+                            <i class="fas fa-envelope-open"></i>
+                        </div>
+                        <div class="details">
+                            <h5>1. Place an order</h5>
+                            <p class="text-grey">Once you have placed an order, we will get back to you within the next 12 hours via email for details on your project.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="process-card_wrapper text-center">
+                        <div class="icon_wrapper">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="details">
+                            <h5>2. Discussion</h5>
+                            <p class="text-grey">In this step, we discuss the vision for your brand and graphics. Once we have all the information needed, you will receive and ETA (estimated time of arrival) for each step of your project and you will be placed in a queue.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="process-card_wrapper text-center">
+                        <div class="icon_wrapper">
+                            <i class="fas fa-money-bill-alt"></i>
+                        </div>
+                        <div class="details">
+                            <h5>3. Initial Deposit</h5>
+                            <p class="text-grey">Once you approve the concept and quote, you will receive an invoice for the payment. 50% paid at the start - 50% at the end. Conditions may vary. </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="process-card_wrapper fr text-center">
+                        <div class="icon_wrapper">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <div class="details">
+                            <h5>4. Creative</h5>
+                            <p class="text-grey">During the creative process, you will be updated on the progress with emails, screenshots and sketches etc. We accept revisions. Please note that revisions may affect delivery time, and (rarely) price.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="process-card_wrapper fl text-center">
+                        <div class="icon_wrapper">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <div class="details">
+                            <h5>5. Delivery</h5>
+                            <p class="text-grey">In this final step, we will reveal all of your graphics to you. When approved you will receive and email with all of the project files ready to use. Source files are included. </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="section-wrapper default bg-blue-dark section-cta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="cta-content text-center">
+                        <h2>Ready to get started?</h2>
+                        <div class="cta-btn_wrapper text-center">
+                            <a href="{% url 'quote' %}" class="default-btn">Get in touch
+                                <span class="btn-icon">
+                                    <i class="far fa-arrow-right"></i>
+                                </span>
+                            </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+{%endblock%}

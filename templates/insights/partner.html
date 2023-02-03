@@ -1,0 +1,104 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/." class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'work_page' %}">Work</a></li>
+                        <li><a href="{% url 'service_page' %}">Services</a></li>
+                        <li class="active"><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="section-wrapper default insight-layout">
+        <div class="container">
+            <div class="insight-layout-content">
+                <h3>Streamers, want <span class="empha">FREE</span> stream graphics? See if you are eligible to become an official partner.</h3>
+                <div class="img-wrapper">
+                    <img src="/media/insights/partner.png">
+                </div>
+                <h4>Streamers, content creators; this is for you!</h4>
+                <p>Are you an established, or upcoming streamer that is interested in having your own dedicated team to provide any graphics that your channel needs? From thumbnails, overlays and facecams, and social media announcement graphics – we got
+                    you covered. As a partner of GamefaceX, you will have you access to high quality graphics from some of the best designers in the industry. This will allow you to focus on creating awesome content, while we handle the rest. </p>
+                <p>No more need for endless hour learning how to use photoshop for a custom piece, all you have to do is get in touch with us and we will let you know what can be done. </p>
+                <br>
+                <h4>How does this work?</h4>
+                <p>As you provide you with graphics to help grow twitch channels and online brands, our partners return the service by representing us in their content, channel, and referrals. Most of the promotional material is relevant to the content of
+                    our partners. This enables us to have a well-balanced relationship. </p>
+
+                <p>As a partner you will receive of discount code to share with your audience for anyone that is looking to save on their stream graphics. The more order placed with your code, the greater the discount for your supporter will be and you will
+                    be eligible for new graphics for yourself. </p>
+                <br>
+                <h4>How to apply</h4>
+                <p>Fill out the form below with some information and link to your stream channel and social media accounts. We will review your brand and if you are selected, we will reach out to you to discuss the opportunities in working with GamefaceX.
+                </p>
+                <br>
+                <div class="order-form" id="order">
+                    <div id="errors" style="color: red; margin-bottom:20px;"></div>
+                    <form id="order-form" method="POST">
+                        {% csrf_token %}
+                        <input name="name" type="text" class="form-control" placeholder="Your Name *" required maxlength=64>
+                        <br>
+                        <input name="email" type="email" class="form-control" placeholder="Your Email *" required maxlength=255>
+                        <br>
+                        <input name="socials" type="text" class="form-control" placeholder="Social media account(s) *" required maxlength=64>
+                        <br>
+                        <input name="stream" type="text" class="form-control" placeholder="Stream link (eg. www.twitch.tv/gamefacex)" maxlength=64>
+                        <br>
+                        <input name="followers" type="text" class="form-control" placeholder="Total follow count" maxlength=64>
+                        <br>
+                        <textarea name="details" class="form-control" placeholder="What future do you see for your channel? *" row="4" required maxlength=255></textarea>
+                        <br>
+
+                        <input type="submit" class="default-btn" value="Sumbit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(
+            $('form#order-form').on('submit', function(e){
+                e.preventDefault()
+
+                let csrfmiddlewaretoken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+                let name = $('[name="name"]').val();
+                let email = $('[name="email"]').val();
+                let socials = $('[name="socials"]').val();
+                let stream = $('[name="stream"]').val();
+                let followers = $('[name="followers"]').val();
+                let details = $('[name="details"]').val();
+                    console.log('pag')
+                $.post("{% url 'partner-sent' %}",{
+                    csrfmiddlewaretoken: csrfmiddlewaretoken,
+                    name: name,
+                    email: email,
+                    socials: socials,
+                    stream: stream,
+                    followers: followers,
+                    details: details
+                }).done(function(html){
+                    console.log('succeed')
+                    $('div#order').html(html)
+                }).fail(function(resp){
+                    console.log('fail')
+                    $('div#errors').html(resp.responseJSON.msg);
+                })
+            })
+        )
+    </script>
+
+    {%endblock%}

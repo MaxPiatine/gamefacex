@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/." class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'work_page' %}">Work</a></li>
+                        <li><a href="{% url 'service_page' %}">Services</a></li>
+                        <li class="active"><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="section-wrapper default insight-layout">
+        <div class="container">
+            <div class="insight-layout-content">
+                <h3>GamefaceX - a new beginning</h3>
+                <div class="img-wrapper">
+                    <img src="/media/insights/hivebranding-to-gamefacex.png">
+                </div>
+                <h4>How we got here</h4>
+                <p>In 2016, Hivebranding was created as a graphic design company tailored to the content creators of the gaming world. Since then we’ve helped streamers improve their brands with high quality graphics. Today, we are embarking on a new chapter.
+                </p>
+                <br>
+                <p>The state of the streaming and graphic design. New channels, technology, games, and platforms has evolved to fit the new demands of the market. We must evolve as well. As GamefaceX, we are setting out to help content creators get their
+                    game-face on with designs that empower their stream dreams. </p>
+                <br>
+                <h4>Where we are going</h4>
+                <p>Since the beginning our company’s history, we have set out to become a leading provider of graphics in the market – and develop lasting relationships with every gamer we meet. GamefaceX will be greatly focused on the user experience, technology
+                    and accessibility of each of our clients. </p>
+
+                <p>We look forward to the new beginnings ahead. </p>
+            </div>
+        </div>
+    </div>
+
+{%endblock%}

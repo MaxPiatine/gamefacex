@@ -1,0 +1,139 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<body>
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/." class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li class="active"><a href="{% url 'work_page' %}">Work</a></li>
+                        <li><a href="{% url 'service_page' %}">Services</a></li>
+                        <li><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-wrapper default bg-blue-dark section-sub-hero">
+        <div class="container-wide">
+            <div class="row">
+                <div class="col">
+                    <h1 class="title-heading white">Selected Work</h1>
+                    <p>Although we’ve worked on hundreds of projects, here are some selected projects we’ve chosen to showcase our variety of packages.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="case-preview_thumb">
+                    <div class="col-lg">
+                        <div class="caseThumb">
+                            <a href="{% url 'kingland' %}"><img src="/media/case-studies/kingland/thumb-preview.png"></a>
+                            <div class="mobile-title">
+                                Kingland
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="caseThumb">
+                            <a href="{% url 'mudbuddy' %}"><img src="/media/case-studies/mudbuddy/thumb-preview.png"></a>
+                            <div class="mobile-title">
+                                Mudbuddy
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="caseThumb">
+                            <a href="{% url 'folkhen' %}"><img src="/media/case-studies/folkhen/thumb-preview.png"></a>
+                            <div class="mobile-title">
+                                Folkhen
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="caseThumb">
+                            <a href="{% url 'kingboozer' %}"><img src="/media/case-studies/kingboozer/thumb-preview.png"></a>
+                            <div class="mobile-title">
+                                King boozer
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="caseThumb">
+                            <a href="{% url 'alfy' %}"><img src="/media/case-studies/alfy/thumb-preview.png"></a>
+                            <div class="mobile-title">
+                                Alfy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="section-wrapper default section-portfolio_nav">
+        <div class="container-wide">
+            <ul>
+                <li class="list active" data-filter="all">All Projects</li>
+                <li class="list" data-filter="logo">Logos</li>
+                <li class="list" data-filter="motion">Motion Design</li>
+                <li class="list" data-filter="stream">Stream Graphics</li>
+                <li class="list" data-filter="emotes">Emotes</li>
+                <li class="list" data-filter="social">Social Media</li>
+                <li class="list" data-filter="other">Other</li>
+            </ul>
+        </div>
+    </div> -->
+    {% block gallery %}
+
+    {% endblock%}
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()"><i class="fas fa-times"></i></span>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="modal-content">
+
+        </div>
+    </div>
+    <div class="section-wrapper default bg-blue-dark section-cta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="cta-content text-center">
+                        <h2>Ready to get started?</h2>
+                        <div class="cta-btn_wrapper text-center">
+                            <a class="default-btn" href='{% url "quote" %}'>Get in touch
+                                <span class="btn-icon">
+                                    <i class="far fa-arrow-right"></i>
+                                </span>
+                            </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% load static %}
+    <!-- jQuery JS -->
+    <script src="{% static 'js/vendor/jquery-3.3.1.min.js' %}"></script>
+    <!-- JS -->
+    <script src="{% static 'js/lightbox-cases.js' %}"></script>
+    <script src="{% static 'js/lightbox.js' %}"></script>
+    <script src="{% static 'js/lazyload.js' %}"></script>
+
+
+{% endblock %}

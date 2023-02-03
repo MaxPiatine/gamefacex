@@ -1,0 +1,187 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/." class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li class="active"><a href="{% url 'work_page' %}">Work</a></li>
+                        <li><a href="{% url 'service_page' %}">Services</a></li>
+                        <li><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-wrapper default section-single-case hero mudbuddy">
+        <div class="container">
+            <div class="title-wrapper">
+                <h1>Mud Buddy</h1>
+                <h5>Ducks' hunting</h5>
+            </div>
+        </div>
+    </div>
+    <div class="section-wrapper default bg-blue-dark section-single-case">
+        <div class="container">
+            <div class="project-brief">
+                <div class="case-desc-wrapper">
+                    <div class="row">
+                        <div class="col-lg-8 col-sm-12">
+                            <div class="mobile-name">Mudbuddy</div>
+                            <h3>Overview</h3>
+                            <p>Mudbuddy, southern hunter and streamer needed something to represent his personality on, and off, of the screen. He hunts duck – but online he is the duck doing the hunting.
+                            </p>
+                            <p>We worked out a package that can start his stream and online presence with all the graphics needed for an official brand. From a stream package, logo design, video intro, to a set of subscriber badges; the duck was equipped
+                                with everything that he needed to enter the world of twitch.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="products-wrapper">
+                                <h5>Services</h5>
+                                <li>Logo Design</li>
+                                <li>Motion Design</li>
+                                <li>Social Media Revamp</li>
+                                <li>Stream Package</li>
+                                <li>Subscriber Badges</li>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-wrapper default section-single-case">
+        <div class="container">
+            <div class="project">
+                <div class="project-sub-title">
+                    <h5>logo design</h5>
+                    <hr>
+                    <p>Mudbuddy’s mascot logo was based on his personality and duck hunting hobby. The green and yellow color scheme felt like the perfect choice as soon as we put in the color swatches. With this mascot logo package, our client also got
+                        a spell-out. </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(1)">
+                            <img src="/media/case-studies/mudbuddy/mudbuddy-mascot.png">
+                            <div class="modal-slide">
+                                <img src="/media/case-studies/mudbuddy/mudbuddy-mascot.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(2)">
+                            <img src="/media/case-studies/mudbuddy/text.png">
+                            <div class="modal-slide">
+                                <img src="/media/case-studies/mudbuddy/text.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-sub-title">
+                    <h5>Intro</h5>
+                    <hr>
+                    <p>The intro for Mudbuddy was designed to be used for either his YouTube videos or at the start of his stream. The goal of this intro was to capture the outdoors hunting nature of the brand. </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(3)">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                            <img src="/media/case-studies/mudbuddy/motion-thumb.jpg">
+                            <div class="modal-slide">
+                                <iframe src="https://www.youtube.com/embed/X_bVarpWcR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-sub-title">
+                    <h5>Stream package + Social media revamp</h5>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(4)">
+                            <img src="/media/case-studies/mudbuddy/mudbuddy-facecam.png">
+                            <div class="modal-slide">
+                                <img src="/media/case-studies/mudbuddy/mudbuddy-facecam.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(5)">
+                            <img src="/media/case-studies/mudbuddy/mudbuddy-stream.png">
+                            <div class="modal-slide">
+                                <img src="/media/case-studies/mudbuddy/mudbuddy-stream.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(6)">
+                            <img src="/media/case-studies/mudbuddy/mudbuddy-social.png">
+                            <div class="modal-slide">
+                                <img src="/media/case-studies/mudbuddy/mudbuddy-social.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-sub-title">
+                    <h5>subscriber badges</h5>
+                    <p>Here are the subscriber badges we created for his most loyal viewers. </p>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(6)">
+                            <img src="/media/case-studies/mudbuddy/mudbuddy-badges.png">
+                            <div class="modal-slide">
+                                <img src="/media/case-studies/mudbuddy/mudbuddy-badges.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-case-study-bottom-nav">
+        <div class="container-wide">
+            <div class="case-nav-wrapper">
+                <a href="{% url 'kingland' %}">
+                    <div class="case-previous"><i class="fas fa-arrow-left"></i></div>
+                </a>
+
+                <a href="{% url 'work_page' %}">
+                    <div class="case-work"><i class="fas fa-th"></i></div>
+                </a>
+                <a href="{% url 'folkhen' %}">
+                    <div class="case-next"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()"><i class="fas fa-times"></i></span>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="modal-content">
+
+        </div>
+    </div>
+
+    {% load static %}
+    <!-- jQuery JS -->
+    <script src="{% static 'js/vendor/jquery-3.3.1.min.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'js/lightbox-cases.js' %}"></script>
+
+{%endblock%}

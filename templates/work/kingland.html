@@ -1,0 +1,154 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/." class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li class="active"><a href="{% url 'work_page' %}">Work</a></li>
+                        <li><a href="{% url 'service_page' %}">Services</a></li>
+                        <li><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-wrapper default section-single-case hero kingland">
+        <div class="container">
+            <div class="title-wrapper">
+                <h1>Kingland</h1>
+                <h5>Fit for a king</h5>
+            </div>
+        </div>
+    </div>
+    <div class="section-wrapper default bg-blue-dark section-single-case">
+        <div class="container">
+            <div class="project-brief">
+                <div class="case-desc-wrapper">
+                    <div class="row">
+                        <div class="col-lg-8 col-sm-12">
+                            <div class="mobile-name">Kingland</div>
+                            <h3>Overview</h3>
+                            <p>Kingland approached us to redesign is entire brand, something that better represented his name and personality. Previously, his logo was a robot mascot. However, together we decided that a better approach would be to focus
+                                on a theme of royalty.
+                            </p>
+                            <p>As the scope of this project went beyond branding, the crown logo design was followed up with stream overlay, facecam and rest of the package; and a social media revamp that can broadcast his new branding across all of his
+                                social media sites.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="products-wrapper">
+                                <h5>Services</h5>
+                                <li>Logo Design</li>
+                                <li>Social Media Revamp</li>
+                                <li>Stream Package</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-wrapper default section-single-case">
+        <div class="container">
+            <div class="project">
+                <div class="project-sub-title">
+                    <h5>logo design</h5>
+                    <hr>
+                    <p>Originally, Kingland’s brand was represented with a robot mascot logo. However, as he looked to expand his brand, it was clear that his brand was better presented as a hybrid text-mascot logo. Here we introduced the crown badge concept.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(1)">
+                            <img src="/media/case-studies/kingland/case-logo.png">
+                            <div class="modal-slide">
+                                <img class="wide" src="/media/case-studies/kingland/case-logo.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(2)">
+                            <img src="/media/case-studies/kingland/text-logo.png">
+                            <div class="modal-slide">
+                                <img class="wide" src="/media/case-studies/kingland/text-logo.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-sub-title">
+                    <h5>social media revamp</h5>
+                    <hr>
+                    <p>A sleek and professional backing, particles, and flairs – nicely highlighting some of the logo features. </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(3)">
+                            <img src="/media/portfolio/kingland_Revamp.png">
+                            <div class="modal-slide">
+                                <img class="wide" src="/media/portfolio/kingland_Revamp.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-sub-title">
+                    <h5>stream package</h5>
+                    <hr>
+                    <p>We wrapped up this project with a stream package that can capture the attention of new viewers. The stream package also includes a facecam intermission screen for when there is no gameplay and he is interacting with his viewers. </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="imageBox" onclick="openModal();currentSlide(4)">
+                            <img src="/media/portfolio/kingland_stream.png">
+                            <div class="modal-slide">
+                                <img class="wide" src="/media/portfolio/kingland_stream.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-case-study-bottom-nav">
+        <div class="container-wide">
+            <div class="case-nav-wrapper">
+                <a href="{% url 'alfy' %}">
+                    <div class="case-previous"><i class="fas fa-arrow-left"></i></div>
+                </a>
+
+                <a href="{% url 'work_page' %}">
+                    <div class="case-work"><i class="fas fa-th"></i></div>
+                </a>
+                <a href="{% url 'mudbuddy' %}">
+                    <div class="case-next"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()"><i class="fas fa-times"></i></span>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="modal-content">
+        </div>
+    </div>
+
+    {% load static %}
+    <!-- jQuery JS -->
+    <script src="{% static 'js/vendor/jquery-3.3.1.min.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'js/lightbox-cases.js' %}"></script>
+
+
+{% endblock%}

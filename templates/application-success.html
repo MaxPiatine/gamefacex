@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block content%}
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/" class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'work_page' %}">Work</a></li>
+                        <li><a href="{% url 'service_page' %}">Services</a></li>
+                        <li><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-wrapper default">
+        <div class="container">
+            <div class="quote-success">
+                <img src="/media/logo/Type+Logo.png">
+                <h2>Your application has been received!</h2>
+                <p>You will be contact shortly (within the next 24 hours) to discuss the next steps for your brand. We look forward to speaking with you!</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
