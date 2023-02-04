@@ -5,6 +5,7 @@ from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 
 from x.models import Quota, Partner
+import environ
 
 # Create your views here.
 
@@ -143,8 +144,8 @@ def partner_sign_up(request):
             send_mail(
                 "Partnership from %s" % name,
                 "Partner",
-                'maximpiatine@hotmail.com',
-                ['max.piatine@hotmail.com', 'y.edwardv@gmail.com', 'info@danielandrade.ca'],
+                env('EMAIL_0'),
+                [env('EMAIL_1'), env('EMAIL_2'), env('EMAIL_3')],
                 html_message=html)
         except ConnectionRefusedError:
             return JsonResponse({'msg': 'Failed to send your Data'}, status=400)
