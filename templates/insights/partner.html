@@ -81,7 +81,6 @@
                 let stream = $('[name="stream"]').val();
                 let followers = $('[name="followers"]').val();
                 let details = $('[name="details"]').val();
-                    console.log('pag')
                 $.post("{% url 'partner-sent' %}",{
                     csrfmiddlewaretoken: csrfmiddlewaretoken,
                     name: name,
@@ -91,10 +90,8 @@
                     followers: followers,
                     details: details
                 }).done(function(html){
-                    console.log('succeed')
                     $('div#order').html(html)
                 }).fail(function(resp){
-                    console.log('fail')
                     $('div#errors').html(resp.responseJSON.msg);
                 })
             })

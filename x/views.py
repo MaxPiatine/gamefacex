@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 
 from x.models import Quota, Partner
-import environ
+from GameFace.settings import env
 
 # Create your views here.
 
@@ -81,8 +81,8 @@ def sending_quote(request):
             send_mail(
                 "Quota",
                 message,
-                'maximpiatine@hotmail.com',
-                ['max.piatine@hotmail.com', 'y.edwardv@gmail.com', 'info@danielandrade.ca'],
+                env('EMAIL_0'),
+                [env('EMAIL_1'), env('EMAIL_2'), env('EMAIL_3')],
                 html_message=html)
         except ConnectionRefusedError:
             return JsonResponse({'msg': 'Failed to send your Data'}, status=400)
