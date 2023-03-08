@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block content%}
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container-wide">
+                <nav class="site-navbar">
+                    <a href="/" class="site-logo">
+                        <img src="/media/logo/Type+Logo.png" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'work_page' %}">Work</a></li>
+                        <li><a href="{% url 'service_page' %}">Services</a></li>
+                        <li><a href="{% url 'insights_page' %}">Insights</a></li>
+                        <li><a href="{% url 'quote' %}">Get a quote</a></li>
+                    </ul>
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-wrapper default" style='height:985px;'>
+        <div class="container">
+            <div>
+                <img src="/media/logo/Type+Logo.png">
+                <h2>Page not found</h2>
+                <p>We're sorry, but the page you requested could not be found.</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
