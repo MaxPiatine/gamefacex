@@ -6,7 +6,6 @@ from django.core.mail import send_mail
 
 from x.models import Quota, Partner
 from GameFace.settings import env
-
 # Create your views here.
 
 def home_page(request):
@@ -156,3 +155,6 @@ def partner_sign_up(request):
 
 def gfx_story_page(request):
     return render(request, 'insights/GamefaceX-a-new-beginning.html')
+
+def handle_404(request, exception):
+    return render(request, 'error.html', status=404)
