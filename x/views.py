@@ -12,6 +12,8 @@ from GameFace.settings import env
 def home_page(request):
     return render(request, 'home.html')
 
+
+# clients
 def alfy(request):
     return render(request, 'work/alfy.html')
 
@@ -27,9 +29,16 @@ def kingland(request):
 def mudbuddy(request):
     return render(request, 'work/mudbuddy.html')
 
-def work_page(request):
+
+# work
+def working_gallery(request):
+    return render(request, 'work/selected-work.html')
+
+def secret_gallery(request):
     return render(request, 'work/gallery.html')
 
+
+# services
 def service_page(request):
     return render(request, 'services/services.html')
 
@@ -91,11 +100,16 @@ def sending_quote(request):
         
     return JsonResponse({}, status=405)
 
+
+# insights & quotes
 def insights_page(request):
     return render(request, 'insights/insights.html')
 
 def partner_page(request):
     return render(request, 'insights/partner.html')
+
+def gfx_story_page(request):
+    return render(request, 'insights/GamefaceX-a-new-beginning.html')
 
 def partner_sign_up(request):
     if request.POST:
@@ -153,6 +167,3 @@ def partner_sign_up(request):
         return render(request, 'quote/quote-success.html')
     
     return JsonResponse({}, status=405)
-
-def gfx_story_page(request):
-    return render(request, 'insights/GamefaceX-a-new-beginning.html')
