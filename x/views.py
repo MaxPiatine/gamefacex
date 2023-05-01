@@ -11,6 +11,8 @@ from GameFace.settings import env
 def home_page(request):
     return render(request, 'home.html')
 
+
+# clients
 def alfy(request):
     return render(request, 'work/alfy.html')
 
@@ -26,9 +28,15 @@ def kingland(request):
 def mudbuddy(request):
     return render(request, 'work/mudbuddy.html')
 
-def work_page(request):
+
+# work
+def selected_work(request):
+    return render(request, 'work/selected-work.html')
+
+def secret_work(request):
     return render(request, 'work/gallery.html')
 
+# services
 def service_page(request):
     return render(request, 'services/services.html')
 
@@ -90,6 +98,8 @@ def sending_quote(request):
         
     return JsonResponse({}, status=405)
 
+
+# insights
 def insights_page(request):
     return render(request, 'insights/insights.html')
 

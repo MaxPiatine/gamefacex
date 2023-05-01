@@ -1,0 +1,60 @@
+{% extends 'work/work.html' %}
+
+{% block selected_work %}
+    <div class="section-wrapper default bg-blue-dark section-sub-hero">
+        <div class="container-wide">
+            <div class="row">
+                <div class="col">
+                    <h1 class="title-heading white">Selected Work</h1>
+                    <p>Although we’ve worked on hundreds of projects, here are some selected projects we’ve chosen to showcase our variety of packages.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="case-preview_thumb">
+                    <div class="col-lg">
+                        <div class="caseThumb">
+                            <a href="{% url 'kingland' %}"><img src="/media/case-studies/kingland/thumb-preview.png"></a>
+                            <div class="mobile-title">
+                                Kingland
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="caseThumb">
+                            <a href="{% url 'mudbuddy' %}"><img src="/media/case-studies/mudbuddy/thumb-preview.png"></a>
+                            <div class="mobile-title">
+                                Mudbuddy
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="caseThumb">
+                            <a href="{% url 'folkhen' %}"><img src="/media/case-studies/folkhen/thumb-preview.png"></a>
+                            <div class="mobile-title">
+                                Folkhen
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="caseThumb">
+                            <a href="{% url 'kingboozer' %}"><img src="/media/case-studies/kingboozer/thumb-preview.png"></a>
+                            <div class="mobile-title">
+                                King boozer
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="caseThumb">
+                            <a href="{% url 'alfy' %}"><img src="/media/case-studies/alfy/thumb-preview.png"></a>
+                            <div class="mobile-title">
+                                Alfy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [env('ALLOWED_HOST1'), env('ALLOWED_HOST2')]
+ALLOWED_HOSTS = [env('ALLOWED_HOST1'), env('ALLOWED_HOST2'), env('ALLOWED_HOST3'), env('ALLOWED_HOST4')]
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = env('EMAIL_HOST')
