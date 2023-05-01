@@ -1,6 +1,6 @@
 {% extends 'work/work.html' %}
 
-{% block gallery %}
+{% block selected_work %}
 
 <div class="section-wrapper default section-portfolio_gallery no-gutters">
     <div class="portfolio-tag">
@@ -757,6 +757,16 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()"><i class="fas fa-times"></i></span>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="modal-content">
+
     </div>
 </div>
 
